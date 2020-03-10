@@ -80,8 +80,14 @@ busImage.addEventListener('wheel', event => {
 
 
 /*
- *  event listener
+ *  load event listener alerts page has loaded
  */
+
+// event listener
+window.addEventListener('load', event => {
+  alert('Page has loaded properly');
+})
+
 
 // add load event listener
 // add focus event listener
