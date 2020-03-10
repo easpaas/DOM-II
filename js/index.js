@@ -26,10 +26,10 @@ logo.addEventListener('mouseleave', event => {
  */
 
 // selector for nav links
-const link = document.querySelectorAll('.nav-link');
+const links = document.querySelectorAll('.nav-link');
 
 // event listeners
-link.forEach(link => {
+links.forEach(link => {
     link.addEventListener('mouseover', event => {
         event.target.style.color = "yellow";
     });
@@ -100,9 +100,15 @@ window.addEventListener('resize', event => {
 
 
 /*
- *   event listener 
+ * context menu event listener prevents default context on nav links
  */
 
+// event listener
+links.forEach(link => {
+  link.addEventListener('contextmenu', event => {
+    event.preventDefault();
+  });
+});
 
 
 /*
