@@ -86,9 +86,28 @@ busImage.addEventListener('wheel', event => {
 // event listener
 window.addEventListener('load', event => {
   alert('Page has loaded properly');
-})
+});
 
 
-// add load event listener
-// add focus event listener
-// add click event listener for button
+/*
+ *  resize event listener alerts page has been resized
+ */
+
+// event listener
+window.addEventListener('resize', event => {
+  alert('Page has been resized');
+});
+
+
+/*
+ *  select event listener changes background of text to red
+ */
+
+// event listener
+
+
+/*
+ *  click event listener opens sign up form
+ */
+
+// event listener
