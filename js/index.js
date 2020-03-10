@@ -84,9 +84,9 @@ busImage.addEventListener('wheel', event => {
  */
 
 // event listener
-window.addEventListener('load', event => {
-  alert('Page has loaded properly');
-});
+// window.addEventListener('load', event => {
+//   alert('Page has loaded properly');
+// });
 
 
 /*
@@ -100,14 +100,21 @@ window.addEventListener('resize', event => {
 
 
 /*
- *  select event listener changes background of text to red
+ *   event listener 
  */
 
-// event listener
 
 
 /*
- *  click event listener opens sign up form
+ *  click event listener opens new tab with google
  */
 
+// selector for all sign up buttons
+const btns = document.querySelectorAll('.content-pick .destination .btn');
+
 // event listener
+btns.forEach(btn => {
+  btn.addEventListener('click', event => {
+    window.open("https:www.google.com");
+  })
+})
