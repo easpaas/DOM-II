@@ -1,14 +1,21 @@
 /*
- * mouseenter and mouseleave event listeners change text color
+ * mouseenter event listeners change text color to yellow
  */
 
  // selector for heading logo
 const logo = document.querySelector('.logo-heading');
 
-// event listeners
+// event listener
 logo.addEventListener('mouseenter', event => {
   event.target.style.color = "yellow";
 });
+
+
+/*
+ * mouseleave event listeners change text color to black
+ */
+
+// event listener
 logo.addEventListener('mouseleave', event => {
   event.target.style.color = "black";
 });
@@ -27,6 +34,7 @@ link.forEach(link => {
         event.target.style.color = "yellow";
     });
 });
+
 
 /*
  * keydown event listener stores key pressed in an array
@@ -55,7 +63,26 @@ busImage.addEventListener('dblclick', event => {
   event.target.setAttribute('alt', "vw bus");
 });
 
-// add drag/drop event listener
+
+/*
+ * wheel event listener scales bus image
+ */
+
+// event listener
+busImage.addEventListener('wheel', event => {
+  let scale = 1;
+  scale += event.deltaY * -0.01;
+  // restrict scale
+  scale = Math.min(Math.max(.125, scale), 4);
+  // apply scale transform
+  busImage.style.transform = `scale(${scale})`;
+})
+
+
+/*
+ *  event listener
+ */
+
 // add load event listener
 // add focus event listener
 // add click event listener for button
