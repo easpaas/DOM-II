@@ -84,9 +84,9 @@ busImage.addEventListener('wheel', event => {
  */
 
 // event listener
-// window.addEventListener('load', event => {
-//   alert('Page has loaded properly');
-// });
+window.addEventListener('load', event => {
+  alert('Page has loaded properly');
+});
 
 
 /*
